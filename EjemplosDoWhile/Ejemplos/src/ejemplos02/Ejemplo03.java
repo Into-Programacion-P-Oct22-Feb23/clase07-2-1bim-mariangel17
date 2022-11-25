@@ -18,19 +18,23 @@ public class Ejemplo03 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         String cadenaFinal = "";
+        double cadenaFina = 0 ;
         double nota;
         boolean bandera = true;
         int salida;
+        double sumaNotas= 0;
         
         do {
             System.out.println("Ingrese calificaciones");
             nota = entrada.nextDouble();
             
-            cadenaFinal = String.format("%s%.2f\n", cadenaFinal, 
+            cadenaFinal = String.format("%s%s\n", cadenaFinal, 
                     nota);
             
             System.out.println("Ingrese (-111) si desea salir del ciclo ");
             salida = entrada.nextInt();
+            
+            cadenaFinal = cadenaFinal + nota;
 
             if (salida == -111) {
                 bandera = false;
